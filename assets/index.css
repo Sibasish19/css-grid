@@ -17,14 +17,6 @@ html {
     box-sizing: inherit;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 100px 50px 100px;
-    grid-template-rows: 50px;
-    grid-auto-rows: 100px;
-    gap: 10px;
-}
-
 .container__item {
     display: flex;
     justify-content: center;
