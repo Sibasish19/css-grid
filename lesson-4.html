@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/index.css" />
+		<link rel="stylesheet" href="./assets/lesson-4.css" />
+		<title>Sizing & Placing Grid Items | CSS Grid</title>
+	</head>
+	<body>
+		<p>
+			<a href="/">Go Home</a>
+		</p>
+		<h2>With grid-column and grid-row</h2>
+		<p>
+			If a particular grid item has excess width more than the alloted
+			width of the column it resides in, the grid will first allot that
+			extra width to the column. So all the items in that column spans on
+			to have that extra width. Similar concept is applicable for heights
+			and rows.
+		</p>
+		<p>
+			Instead using absolute width, you should ideally use spanning to
+			allot any extra width or height as intended. If you wish for an item
+			to take up extra space in column or row you should define explict
+			span and it will flow to next row and column depending on the
+			available space and the next items will follow the flow.
+		</p>
+		<p>
+			If you define a span for a grid item more than the template rows or
+			columns, extra implict tracks will be created and rest of items will
+			be placed accordingly.
+		</p>
+		<p>
+			A grid-column (or grid-row) is a short hand for grid-column-start
+			and grid-column-end. So instead of saying span 2, you can explicitly
+			define which track to start the grid item with and where to item and
+			it will ofcourse span across those many columns (or rows).
+		</p>
+		<p>
+			Alternatively you can use the short-hand with start / end (track
+			numbers) or start / span tracks or span tracks / end to place it
+			explicitly. 1 / -1 will span across the entire grid i.e start at 1st
+			track and end at the last.
+		</p>
+		<div class="container container--box">
+			<div class="container__item container__item--1">1</div>
+			<div class="container__item container__item--2">2</div>
+			<div class="container__item container__item--3">3</div>
+			<div class="container__item container__item--4">4</div>
+			<div class="container__item container__item--5">5</div>
+			<div class="container__item container__item--6">6</div>
+			<div class="container__item container__item--7">7</div>
+			<div class="container__item container__item--8">8</div>
+			<div class="container__item container__item--9">9</div>
+			<div class="container__item container__item--10">10</div>
+			<div class="container__item container__item--11">11</div>
+			<div class="container__item container__item--12">12</div>
+			<div class="container__item container__item--13">13</div>
+			<div class="container__item container__item--14">14</div>
+			<div class="container__item container__item--15">15</div>
+			<div class="container__item container__item--16">16</div>
+			<div class="container__item container__item--17">17</div>
+			<div class="container__item container__item--18">18</div>
+			<div class="container__item container__item--19">19</div>
+			<div class="container__item container__item--20">20</div>
+			<div class="container__item container__item--21">21</div>
+			<div class="container__item container__item--22">22</div>
+			<div class="container__item container__item--23">23</div>
+			<div class="container__item container__item--24">24</div>
+			<div class="container__item container__item--25">25</div>
+			<div class="container__item container__item--26">26</div>
+			<div class="container__item container__item--27">27</div>
+			<div class="container__item container__item--28">28</div>
+			<div class="container__item container__item--29">29</div>
+			<div class="container__item container__item--30">30</div>
+		</div>
+		<h2>With grid-template-areas</h2>
+		<p>
+			You can exclusively name grid-areas and place each row in "" with
+			grid-template-areas. For dead areas put a ".". Now define the
+			grid-area for the specific item with the same name and it will be
+			placed in it's designated area.
+		</p>
+		<p>
+			The best use case of grid-template-areas is when used with media
+			queries, you can simply redefine the template and it works like a
+			charm.
+		</p>
+		<div class="container container--box-2">
+			<div class="container__item container__item--topbar">
+				I am a topbar
+			</div>
+			<div class="container__item container__item--sidebar-1">
+				I am a sidebar
+			</div>
+			<div class="container__item container__item--content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Voluptas voluptatum magni sequi voluptate molestias modi id eius
+				animi nobis aspernatur eveniet, quidem earum qui dolorum eaque
+				harum recusandae esse eos.
+			</div>
+			<div class="container__item container__item--sidebar-2">
+				I am a advertisement
+			</div>
+			<div class="container__item container__item--footer">
+				I am a footer
+			</div>
+		</div>
+	</body>
+</html>

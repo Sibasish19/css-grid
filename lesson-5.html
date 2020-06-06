@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/index.css" />
+		<link rel="stylesheet" href="./assets/lesson-5.css" />
+		<title>Responsive Grid | CSS Grid</title>
+	</head>
+	<body>
+		<p>
+			<a href="/">Go Home</a>
+		</p>
+		<p>
+			auto-fill figures out how many grid items it can fill in the grid
+			container depending on the available viewport space so that we don't
+			have to explicitly define the repeat count.
+		</p>
+		<p>
+			Where as auto-fit works similarly but it stops the grid when there's
+			no content by overlapping all the extra tracks. In other words
+			auto-fit ends the area where the content ends but auto-fill takes it
+			to the end of viewport width.
+		</p>
+		<p>
+			With minmax we don't have to worry about content overfolwing or
+			breaking into a new line when the cell width/height is not
+			sufficient. We need to specify a min width (height in case of
+			gris-rows) and max (generally 1fr i.e; the entire grid width).
+		</p>
+		<p>
+			Alternatively you can use fit-content with a max width (height in
+			case of gris-rows) so that a item clamps upto that amount of space.
+		</p>
+		<div class="container container--box">
+			<div class="container__item container__item--1">Item 01</div>
+			<div class="container__item container__item--2">Item 02</div>
+			<div class="container__item container__item--3">Item 03</div>
+			<div class="container__item container__item--4">Item 04</div>
+			<div class="container__item container__item--5">Item 05</div>
+		</div>
+	</body>
+</html>

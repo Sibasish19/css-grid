@@ -1,0 +1,6 @@
+.container--box {
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    grid-template-columns: repeat(2, 1fr auto);
+    grid-template-rows: repeat(4, 1fr);
+    height: 80vh;
+}
