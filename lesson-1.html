@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/index.css" />
+		<link rel="stylesheet" href="./assets/lesson-1.css" />
+		<title>Implicit VS Explicit Tracks | CSS Grid</title>
+	</head>
+	<body>
+		<p>
+			<a href="/">Go Home</a>
+		</p>
+		<p>
+			When you set display as a grid for any container, you need to slice
+			and dice it into columns and rows called tracks and place items
+			across spans. Now you define all the columns/rows explicitly or let
+			grid define the remaining implicity for you.
+		</p>
+		<p>
+			In order to define explict templates, you need to use
+			grid-template-columns and grid-template-rows. While implicity
+			defined columns and rows can be modified by using grid-auto-columns
+			and grid-auto-rows.
+		</p>
+		<p>
+			You can name the lines just like grid-template-areas by using [] in
+			between while defining the grid-template-columns and
+			grid-template-rows. This is helpful if you chnage the layout using
+			media queries.
+		</p>
+		<div class="container container--box">
+			<div class="container__item">Ex</div>
+			<div class="container__item">Ex</div>
+			<div class="container__item">Ex</div>
+			<div class="container__item container__item--5">Im</div>
+			<div class="container__item">Im</div>
+			<div class="container__item">Im</div>
+			<div class="container__item">Im</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+.container--box {
+    grid-template-columns: [sidebar-start site-left] 100px [sidebar-end content-start] 50px [content-end] 100px [site-right];
+    grid-template-rows: 50px;
+    grid-auto-rows: 100px;
+}
+
+.container__item--5 {
+    background: navajowhite;
+    grid-column: site-left / site-right;
+}

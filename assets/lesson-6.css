@@ -1,0 +1,15 @@
+.container--box {
+    grid-template-columns: repeat(5, 100px);
+    /* justify-items: center;
+    align-items: center; */
+    place-items: center center;
+    place-content: center space-evenly;
+}
+
+.container__itm {
+    background: paleturquoise;
+}
+
+.container__itm--5 {
+    justify-self: stretch;
+}

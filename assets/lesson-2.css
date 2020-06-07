@@ -1,0 +1,20 @@
+.container--box {
+    grid-template-columns: repeat(10, 1fr);
+    /* grid-auto-flow: column; */
+    grid-auto-flow: dense;
+}
+
+.container__item:nth-child(6n) {
+    background: olive;
+    grid-column: span 6;
+}
+
+.container__item:nth-child(7n) {
+    background: palevioletred;
+    grid-column: span 2;
+}
+
+.container__item:nth-child(4n) {
+    background-color: peru;
+    grid-row: span 3;
+}
