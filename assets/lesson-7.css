@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+}
+
+html {
+    min-height: 100%;
+    background: linear-gradient(-90deg, #BADA55, var(--clr-accent));
+    background: #70bg32;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.album {
+    margin: 1em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.album__track {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.thumbnail {
+    width: 100%
+}
+
+.album__track__details p {
+    margin-bottom: 1em;
+    color: rgba(0, 0, 0, 0.7);
+}
