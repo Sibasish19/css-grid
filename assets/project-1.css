@@ -1,0 +1,120 @@
+html {
+    min-height: 100%;
+    background: linear-gradient(90deg, #BADA55, var(--clr-accent));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.close {
+    border: none;
+    background: none;
+    float: right;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.75);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+
+.overlay.open {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay .overlay__inner {
+    background: var(--clr-light);
+    width: 700px;
+    padding: 1em;
+}
+
+.overlay__inner img {
+    width: 100%
+}
+
+.gallery {
+    display: grid;
+    gap: 4px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 100px);
+    grid-auto-rows: 100px;
+    grid-auto-flow: dense;
+}
+
+.gallery__item {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+}
+
+.gallery__item img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__item__overlay {
+    background-color: rgba(255, 198, 0, 0.3);
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+
+.gallery__item:hover .gallery__item__overlay {
+    transform: translateY(0%);
+}
+
+.gallery__item__overlay button {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    color: var(--clr-dark);
+    border: 2px solid var(--clr-dark);
+    padding: 0.5em 1.5em;
+    font-weight: bolder;
+}
+
+.gallery__item__overlay button:hover {
+    cursor: pointer;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+}
+
+.gallery__item.ver2 {
+    grid-row: span 2;
+}
+
+.gallery__item.ver3 {
+    grid-row: span 3;
+}
+
+.gallery__item.ver4 {
+    grid-row: span 4;
+}
+
+.gallery__item.hor2 {
+    grid-column: span 2;
+}
+
+.gallery__item.hor3 {
+    grid-column: span 3;
+}
+
+.gallery__item.hor4 {
+    grid-column: span 4;
+}
