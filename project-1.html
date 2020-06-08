@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/index.css" />
+		<link rel="stylesheet" href="./assets/project-1.css" />
+		<title>Imagify</title>
+	</head>
+	<body>
+		<h1>CSS Grid Image Gallery</h1>
+		<div class="overlay">
+			<div class="overlay__inner">
+				<button class="close">X Close</button>
+				<img />
+			</div>
+		</div>
+		<section class="gallery"></section>
+		<script>
+			const IMG_COUNT = 100;
+			const gallery = document.querySelector('.gallery');
+			const overlay = document.querySelector('.overlay');
+			const overlayImage = document.querySelector('img');
+			const closeButton = document.querySelector('.close');
+
+			const generateHTML = ([width, height]) => `
+			                 <div class="gallery__item hor${width} ver${height}">
+			                     <img src="https://source.unsplash.com/random/500x500?sig=${generateRandomNumber(
+										IMG_COUNT * IMG_COUNT
+									)}" alt="a random imaged provided by unsplash">
+			                     <div class="gallery__item__overlay">
+			                         <button> View </button>
+			                     </div>
+			                 </div>
+			             `;
+
+			const generateRandomNumber = (limit) =>
+				Math.floor(Math.random() * limit) + 1;
+
+			const openImageModal = (e) => {
+				const src = e.currentTarget.querySelector('img').src;
+				overlayImage.src = src;
+				overlay.classList.add('open');
+			};
+
+			const coordinates = Array.from({ length: IMG_COUNT }, () => [
+				generateRandomNumber(4),
+				generateRandomNumber(4),
+			]).concat(Array.from({ length: 1000 / IMG_COUNT }, () => [1, 1]));
+
+			gallery.innerHTML = coordinates.map(generateHTML).join('');
+
+			const items = document.querySelectorAll('.gallery__item');
+
+			items.forEach((item) =>
+				item.addEventListener('click', openImageModal)
+			);
+
+			closeButton.addEventListener('click', () =>
+				overlay.classList.remove('open')
+			);
+		</script>
+	</body>
+</html>
